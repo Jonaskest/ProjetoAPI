@@ -2,7 +2,7 @@
 Descrição do Projeto
 Este projeto faz parte da disciplina Desenvolvimento Rápido de Aplicações (RAD) e consiste no desenvolvimento de um sistema monolítico utilizando o framework FASTAPI em Python. O projeto tem como objetivo criar uma aplicação robusta e escalável, seguindo as melhores práticas de desenvolvimento. Além disso, o Docker será utilizado para facilitar a configuração e o ambiente de desenvolvimento, garantindo a portabilidade da aplicação.
 
-#Funcionalidades
+**Funcionalidades**
 Autenticação e Autorização: Sistema de login e controle de acesso.
 CRUD Completo: Operações de Create, Read, Update, e Delete para gerenciamento de recursos.
 Validação de Dados: Uso de Pydantic para garantir a integridade dos dados.
