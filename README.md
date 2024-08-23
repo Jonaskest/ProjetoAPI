@@ -2,7 +2,7 @@
 Descrição do Projeto
 Este projeto faz parte da disciplina Desenvolvimento Rápido de Aplicações (RAD) e consiste no desenvolvimento de um sistema monolítico utilizando o framework FASTAPI em Python. O projeto tem como objetivo criar uma aplicação robusta e escalável, seguindo as melhores práticas de desenvolvimento. Além disso, o Docker será utilizado para facilitar a configuração e o ambiente de desenvolvimento, garantindo a portabilidade da aplicação.
 
-Funcionalidades
+#Funcionalidades
 Autenticação e Autorização: Sistema de login e controle de acesso.
 CRUD Completo: Operações de Create, Read, Update, e Delete para gerenciamento de recursos.
 Validação de Dados: Uso de Pydantic para garantir a integridade dos dados.
@@ -10,7 +10,7 @@ Documentação Automática: Geração automática da documentação da API com S
 Banco de Dados Relacional: Integração com [Nome do Banco de Dados, e.g., PostgreSQL].
 Containerização com Docker: Ambientes de desenvolvimento e produção configurados via Docker.
 Testes Automatizados: Utilização de Pytest para garantir a qualidade do código.
-Tecnologias Utilizadas
+#Tecnologias Utilizadas
 Python 3.10+
 FASTAPI
 Uvicorn
@@ -21,7 +21,7 @@ Pytest
 Docker & Docker Compose
 PostgreSQL
 
-Instalação e Configuração
+#Instalação e Configuração
 1. Clonando o Repositório
 
 git clone https://github.com/seu-usuario/seu-repositorio.git
@@ -41,7 +41,7 @@ A aplicação estará disponível em http://127.0.0.1:8000. A documentação da 
 Após subir os containers, execute as migrações para configurar o banco de dados:
 
 docker-compose exec web alembic upgrade head
-Uso
+#Uso
 Descreva aqui como utilizar a API, incluindo exemplos de endpoints, payloads de requisição e respostas esperadas.
 
 Exemplo de Requisição
@@ -54,7 +54,7 @@ Exemplo de Resposta
   "name": "item1",
   "description": "A simple item"
 }
-Estrutura do Projeto
+#Estrutura do Projeto
 
 ├── app/
 │   ├── main.py             # Ponto de entrada da aplicação
@@ -70,7 +70,7 @@ Estrutura do Projeto
 ├── requirements.txt        # Dependências do projeto
 └── README.md               # Documentação do projeto
 
-Contribuição
+#Contribuição
 Contribuições são bem-vindas! Para contribuir:
 
 Faça um fork do projeto.
@@ -78,5 +78,5 @@ Crie uma branch para a sua feature (git checkout -b feature/AmazingFeature).
 Faça commit das suas alterações (git commit -m 'Add some AmazingFeature').
 Envie para o repositório remoto (git push origin feature/AmazingFeature).
 Abra um Pull Request.
-Licença
+#Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
