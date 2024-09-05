@@ -54,21 +54,6 @@ Descreva aqui como utilizar a API, incluindo exemplos de endpoints, payloads de 
   "name": "item1",
   "description": "A simple item"
 }`
-# Estrutura do Projeto
-
-├── app/
-│   ├── main.py             # Ponto de entrada da aplicação
-│   ├── models.py           # Modelos de dados
-│   ├── schemas.py          # Esquemas Pydantic para validação
-│   ├── crud.py             # Operações de CRUD
-│   ├── database.py         # Configuração do banco de dados
-│   ├── routers/            # Rotas da aplicação
-│   └── tests/              # Testes automatizados
-├── alembic/                # Migrações de banco de dados
-├── docker-compose.yml      # Configuração dos serviços Docker
-├── Dockerfile              # Instruções de construção da imagem Docker
-├── requirements.txt        # Dependências do projeto
-└── README.md               # Documentação do projeto
 
 # Contribuição
 Contribuições são bem-vindas! Para contribuir:
