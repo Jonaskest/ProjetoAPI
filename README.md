@@ -1,5 +1,5 @@
 # Projeto  fastAPI
-Descrição do Projeto
+## Descrição do Projeto
 Este projeto faz parte da disciplina Desenvolvimento Rápido de Aplicações (RAD) e consiste no desenvolvimento de um sistema monolítico utilizando o framework FASTAPI em Python. O projeto tem como objetivo criar uma aplicação robusta e escalável, seguindo as melhores práticas de desenvolvimento. Além disso, o Docker será utilizado para facilitar a configuração e o ambiente de desenvolvimento, garantindo a portabilidade da aplicação.
 
 # Funcionalidades
