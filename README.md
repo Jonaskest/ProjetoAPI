@@ -41,8 +41,6 @@ A aplicação estará disponível em http://127.0.0.1:8000. A documentação da 
 Após subir os containers, execute as migrações para configurar o banco de dados:
 
 `docker-compose exec web alembic upgrade head`
-# Uso
-Descreva aqui como utilizar a API, incluindo exemplos de endpoints, payloads de requisição e respostas esperadas.
 
 ## Exemplo de Requisição
 
