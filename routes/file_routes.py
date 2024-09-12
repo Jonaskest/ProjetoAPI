@@ -8,7 +8,6 @@ async def create_file():
 
 @router.post('/file/add_data')
 async def upload_file(file: UploadFile = File(...)):
-    # Adicione o processamento do arquivo aqui
     return {'message': 'Arquivo enviado com sucesso'}
 
 @router.post('/file/add_data')
