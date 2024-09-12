@@ -22,17 +22,15 @@ class FileProcessor:
     async def upload_file(self, file: UploadFile):
         if file.filename.endswith('.csv'):
             try:
-                csv_reader = csv.reader(file.file)
+
+                content = await file.read()
+                decoded_file = content.decode('utf-8').splitlines()
+
+                csv_reader = csv.DictReader(decoded_file)
                 for row in csv_reader:
-                    data = {
-                        "conta": row[0],
-                        "agencia": row[1],
-                        "texto": row[2],
-                        "valor": float(row[3])
-                    }
-                    print(data)
+                    print(row)
+                return {"mensagem": f"Arquivo {file.filename} processado com sucesso"}
             except Exception as e:
-                # Aqui você pode definir um tratamento adequado de erro, por exemplo:
                 raise HTTPException(
                     status_code=status.HTTP_406_NOT_ACCEPTABLE,
                     detail=f"Falha ao processar o arquivo CSV: {str(e)}"
@@ -42,3 +40,18 @@ class FileProcessor:
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="O arquivo deve ser do tipo .csv"
             )
+async def add_data_to_file(self, data: dict):
+    # add data to file created
+    # :param data: account data history
+    # :return: error or sucess message
+
+if os.path.exists(self.file_path):
+    with open(self.file_path, mode='a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([data["conta"], data["agencia"], data["texto"], data["valor"]])
+        return {"mensagem": f"Dados inseritos com sucesso: {data}"}
+else:
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND),
+                        detail="Arquivo inexistente, por favor acessar"
+                                "a rota de criar o arquivo"
+
