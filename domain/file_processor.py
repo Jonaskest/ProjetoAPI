@@ -32,7 +32,6 @@ class FileProcessor:
                     }
                     print(data)
             except Exception as e:
-                # Aqui você pode definir um tratamento adequado de erro, por exemplo:
                 raise HTTPException(
                     status_code=status.HTTP_406_NOT_ACCEPTABLE,
                     detail=f"Falha ao processar o arquivo CSV: {str(e)}"
