@@ -22,6 +22,19 @@ class FileProcessor:
             raise HTTPException(status_code=status.HTTP_406_NOT_ACCEPTABLE,
                                 detail="Arquivo já existe")
 
+    async def delete_data(self, selected_line: int):
+        if os.path.exists(self.file_path):
+            with open(self.file_path, mode='r') as file:
+                lines = file.readlines()
+
+            if selected_line < 1 or selected_line >= len(lines):
+                raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Linha selecionada inválida.")
+            with open(self.file_path, mode='w') as file:
+                for index, line in enumerate(lines):
+                    if index != selected_line:
+                        file.write(line)
+            return {"mensagem": "Linha selecionada deletada."}
+
     async def upload_file(self, file: UploadFile):
         """
         Upload a file to read and print data
@@ -85,3 +98,5 @@ class FileProcessor:
             return {"Lista de dados": data_list}
         else:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Arquivo não encontrado")
+
+
